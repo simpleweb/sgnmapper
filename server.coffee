@@ -3,7 +3,7 @@ sg = require 'sgnodemapper'
 
 server = express.createServer()
 
-server.get '/', (req, res) ->
+server.use (req, res) ->
   url = req.param('url')
   res.send url: req.param('url'), sgn: sg.urlToGraphNode(url)
 
