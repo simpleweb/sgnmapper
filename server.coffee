@@ -3,6 +3,9 @@ sg = require 'sgnodemapper'
 
 server = express.createServer()
 
+server.configure ->
+  server.use express.bodyParser()
+
 server.use (req, res) ->
   url = req.param('url')
 
