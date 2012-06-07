@@ -2,12 +2,12 @@
   "author": "",
   "name": "sgnmapaas",
   "version": "0.0.0",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "coffee-script": "1.3.3",
     "sgnodemapper": "https://gist.github.com/gists/659faf7bd458438aaa75/download",
     "express": "2.5.9"
   },
+  "devDependencies": {},
   "optionalDependencies": {},
   "engines": {
     "node": "~> 0.6.18"
