@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "dependencies": {},
   "devDependencies": {
+    "coffee-script": "1.3.3",
     "sgnodemapper": "https://gist.github.com/gists/659faf7bd458438aaa75/download",
     "express": "2.5.9"
   },
