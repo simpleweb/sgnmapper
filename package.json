@@ -1,0 +1,14 @@
+{
+  "author": "",
+  "name": "sgnmapaas",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "sgnodemapper": "https://gist.github.com/gists/659faf7bd458438aaa75/download",
+    "express": "2.5.9"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
