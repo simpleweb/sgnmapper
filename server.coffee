@@ -15,7 +15,7 @@ server.use (req, res) ->
   else if sgn = req.param('sgn')
     res.send url: sg.urlFromGraphNode(sgn, 'profile'), sgn: sgn, sgnParsed: sg.parseSgnUrl(sgn)
   else
-    res.send 400, message: 'Please sepcify a url to lookup'
+    res.send error: 'Try POSTing a url field to /', 400
 
 server.listen process.env.PORT || 3000, ->
   console.log "SGNMapper server listening on port #{server.address().port}"
