@@ -16,6 +16,8 @@ npm install
 
 ## Usage
 
+### Server
+
 To start the server on port 3000 you can run:
 
 ```
@@ -28,6 +30,23 @@ port 5000.
 
 ```
 foreman start
+```
+
+### Client
+
+To convert an http url to an sgn url, provide the url as a parameter,
+with `curl(1)` it would look something like:
+
+```
+$ curl -s http://localhost:3000/ -d 'url=http://twitter.com/hecticjeff'
+{"url":"http://twitter.com/hecticjeff","sgn":"sgn://twitter.com/?ident=hecticjeff","sgnParsed":{"domain":"twitter.com","keyName":"ident","value":"hecticjeff"}}
+```
+
+To convert from sgn url back to http, provide an `sgn` parameter:
+
+```
+$ curl -s http://localhost:3000/ -d 'sgn=sgn://twitter.com/?ident=hecticjeff'
+{"url":"http://twitter.com/hecticjeff","sgn":"sgn://twitter.com/?ident=hecticjeff","sgnParsed":{"domain":"twitter.com","keyName":"ident","value":"hecticjeff"}}
 ```
 
 ## Copyright
