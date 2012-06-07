@@ -5,6 +5,9 @@ server = express.createServer()
 
 server.configure ->
   server.use express.bodyParser()
+  server.use (req, res, next) ->
+    res.header 'Link', '<https://github.com/simpleweb/sgnmapper>; rel="help"; title="GitHub project"'
+    next()
 
 server.use (req, res) ->
   url = req.param('url')
